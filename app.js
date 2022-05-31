@@ -61,7 +61,7 @@ playButton.addEventListener("click", function () {
         }
         let showArray = arrayControl(mainArray, userValue);
         punteggio=showArray.length
-        if(punteggio==showArray.length){
+        if(punteggio==mainArray.length){
             myContainer.innerHTML +=`<h1>Hai indovinato tutti i numeri. ${showArray}`
         }else if(punteggio==0){
             myContainer.innerHTML +=`<h1>Non hai indovinato nemmeno un numero`
