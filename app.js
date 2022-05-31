@@ -39,6 +39,7 @@ playButton.addEventListener("click", function () {
     let time = 30;
     let punteggio=0
     let userValue = []
+    myContainer.innerHTML=""
     let timer = setInterval(() => {
         time--
         console.log(time);
@@ -56,7 +57,12 @@ playButton.addEventListener("click", function () {
             userValue.push(x)
         }
         let showArray = arrayControl(mainArray, userValue);
-        myContainer.innerHTML +=`<h1>Hai indovinato ${punteggio} numeri.I numeri che hai indovinato sono: ${showArray}</h1>`
+        if(punteggio==0){
+            myContainer.innerHTML +=`<h1>Hai indovinato ${punteggio} numeri.`
+        }else{
+            myContainer.innerHTML +=`<h1>Hai indovinato ${punteggio} numeri.I numeri che hai indovinato sono: ${showArray}</h1>`
+        }
+        
         
     }, 1000 * 31);
 
