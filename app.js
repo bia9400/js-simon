@@ -23,7 +23,7 @@ function arrayControl(ArrayControllo, array2) {
     for (let i = 0; i < ArrayControllo.length; i++) {
         if (ArrayControllo.includes(array2[i])) {
             punteggio++
-            newArray[i]=array2[i]
+            newArray.push(array2[i])
         }
     }
     console.log(newArray);
