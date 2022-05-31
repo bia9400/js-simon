@@ -1,6 +1,8 @@
 const playButton = document.getElementById("playButon");
 const cardContainer = document.querySelector(".row");
+let myContainer=document.querySelector(".my-cotainer")
 let mainArray = [];
+
 function createGrid(livelloDifficoltà) {
     cardContainer.innerHTML = ""
 
@@ -35,6 +37,7 @@ function arrayControl(ArrayControllo, array2) {
 playButton.addEventListener("click", function () {
     createGrid(5)
     let time = 30;
+    let punteggio=0
     let userValue = []
     let timer = setInterval(() => {
         time--
@@ -49,13 +52,12 @@ playButton.addEventListener("click", function () {
 
 
         while (userValue.length < 5) {
-            let x = prompt("Che numeri ricordi?")
+            let x = parseInt(prompt("Che numeri ricordi?"))
             userValue.push(x)
         }
         let showArray = arrayControl(mainArray, userValue);
+        myContainer.innerHTML +=`<h1>Hai indovinato ${punteggio} numeri.I numeri che hai indovinato sono: ${showArray}</h1>`
         
-        console.log(mainArray);
-        console.log(userValue);
     }, 1000 * 31);
 
 })
