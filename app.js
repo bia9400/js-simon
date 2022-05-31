@@ -60,6 +60,7 @@ playButton.addEventListener("click", function () {
             userValue.push(x)
         }
         let showArray = arrayControl(mainArray, userValue);
+        console.log(showArray);
         punteggio=showArray.length
         if(punteggio==mainArray.length){
             myContainer.innerHTML +=`<h1>Hai indovinato tutti i numeri. ${showArray}`
