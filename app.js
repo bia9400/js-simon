@@ -18,7 +18,7 @@ function createGrid(livelloDifficoltà) {
 }
 
 function arrayControl(ArrayControllo, array2) {
-    let punteggio = 0
+    let punteggio = 0;
     let newArray = [];
     for (let i = 0; i < ArrayControllo.length; i++) {
         if (ArrayControllo.includes(array2[i])) {
@@ -26,7 +26,7 @@ function arrayControl(ArrayControllo, array2) {
             newArray[i]=array2[i]
         }
     }
-    console.log(punteggio);
+    console.log(newArray);
     return newArray
     
 }
