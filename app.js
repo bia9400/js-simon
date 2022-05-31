@@ -39,7 +39,7 @@ playButton.addEventListener("click", function () {
     let time = 30;
     let punteggio=0
     let userValue = []
-    myContainer.innerHTML=""
+    
     let timer = setInterval(() => {
         time--
         console.log(time);
